@@ -8,12 +8,11 @@ from joblib import load
 from feature_engineering import prepare_data
 st.set_page_config(page_title="NYC Taxi Predictor", layout="wide")
 # Load the ridge regression model
-model_path = 'D:/ml_projects/project-nyc-taxi-trip-duration/models/ridge_regression_model.pkl'
+model_path = 'ridge_regression_model.pkl'
 st.markdown("""
 <style>
 .main .block-container {
     max-width: 65%;
-    
     padding-top: 1rem;
     padding-left: 2rem;
     padding-right: 2rem;
