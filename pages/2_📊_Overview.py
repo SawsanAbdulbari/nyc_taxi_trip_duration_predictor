@@ -151,7 +151,7 @@ if df is not None:
     fig.update_traces(texttemplate='%{text:.2f}', textposition='outside')
     fig.update_layout(
         width=800,
-        height=600,
+        height=300,
         margin={"r":0, "t":50, "l":0, "b":0},
         yaxis=dict(range=[plot_vendor['trip_duration'].min() * 0.9, plot_vendor['trip_duration'].max() * 1.1])
     )
