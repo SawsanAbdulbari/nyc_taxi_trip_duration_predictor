@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -13,8 +14,13 @@ This project used for educational purposes.
 """)
 
 # Sidebar information
-image = "img.png"
-st.sidebar.image(image, caption='NYC Taxi(AI)', use_column_width=True)
+# Helper function to load image with error handling
+def load_image(image_path):
+    if os.path.exists(image_path):
+        return image_path
+    else:
+        st.error(f"Error: '{image_path}' not found.")
+        return None
 st.sidebar.write("Machine Learning Diploma Project 📊📈")
 st.sidebar.markdown(
     "Made with :orange_heart: by [Sawsan Abdulbari](https://www.linkedin.com/in/sawsanabdulbari/)"
