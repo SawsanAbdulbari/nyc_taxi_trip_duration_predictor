@@ -14,13 +14,8 @@ This project used for educational purposes.
 """)
 
 # Sidebar information
-# Helper function to load image with error handling
-def load_image(image_path):
-    if os.path.exists(image_path):
-        return image_path
-    else:
-        st.error(f"Error: '{image_path}' not found.")
-        return None
+image = "img.png"
+st.sidebar.image(image, caption='NYC Taxi(AI)', use_column_width=True)
 st.sidebar.write("Machine Learning Diploma Project 📊📈")
 st.sidebar.markdown(
     "Made with :orange_heart: by [Sawsan Abdulbari](https://www.linkedin.com/in/sawsanabdulbari/)"
@@ -57,10 +52,22 @@ def main():
     
     # Display map in Streamlit
     st_folium(m, width=700, height=500)
+    
 # Insert the image at the top of the page
-st.image("taxi.png", use_column_width=True)
 
+# Helper function to load image with error handling
+def load_image(image_path):
+    if os.path.exists(image_path):
+        return image_path
+    else:
+        st.error(f"Error: '{image_path}' not found.")
+        return None
 
+# Insert the image at the top of the page
+image_path = "taxi.png"
+image = load_image(image_path)
+if image:
+    st.image(image, use_column_width=True)
 # Project Background
 st.markdown("""
 ## Project Background
