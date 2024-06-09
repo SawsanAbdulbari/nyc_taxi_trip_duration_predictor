@@ -1,0 +1,6 @@
+streamlit==1.34.0
+pandas==2.2.2
+numpy==1.25.2
+folium==0.16.0
+streamlit-pandas-profiling==0.1.3
+streamlit_folium @ file:///home/conda/feedstock_root/build_artifacts/streamlit-folium_1714078287862/work
