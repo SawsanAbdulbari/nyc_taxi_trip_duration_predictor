@@ -15,7 +15,7 @@ This project used for educational purposes.
 
 # Sidebar information
 image = "img.png"
-st.sidebar.image(image, caption='NYC Taxi(AI)', use_column_width=True)
+st.sidebar.image(image, caption='NYC Taxi(AI)', use_container_width=True)
 st.sidebar.write("Machine Learning Diploma Project 📊📈")
 st.sidebar.markdown(
     "Made with :orange_heart: by [Sawsan Abdulbari](https://www.linkedin.com/in/sawsanabdulbari/)"
@@ -67,7 +67,7 @@ def load_image(image_path):
 image_path = "taxi.png"
 image = load_image(image_path)
 if image:
-    st.image(image, use_column_width=True)
+    st.image(image, use_container_width=True)
 # Project Background
 st.markdown("""
 ## Project Background
